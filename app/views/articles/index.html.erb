@@ -1,0 +1,21 @@
+<html>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    Mewweb
+  </a>
+  <%= link_to "create tasks",  new_article_path , class:"mr-sm-2 navbar-brand"%>
+</nav>
+<div class = "d-block ml-100">
+    <div class ="col-sm-8 col-sm-offset-2" style="margin-left:500px">
+        <h1>My Tasks</h1>
+        <% @articles.each do |article| %>
+        <li><%= link_to article.title,  article_path(article.id) %></li>
+        <% end %>
+        <p><%= link_to "create tasks",  new_article_path %></p>
+    </div>
+</div>
+
+
+
+</html>
